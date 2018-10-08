@@ -24,4 +24,4 @@ sensors:
           > Some quoted text here.
 ```
 
-![example](https://user-images.githubusercontent.com/2099542/46613801-0a70a280-cb0c-11e8-9286-63245b6d1d8b.png | width=100)
+![example](https://user-images.githubusercontent.com/2099542/46614336-7f90a780-cb0d-11e8-8417-6f4f3f1e80e2.png)
