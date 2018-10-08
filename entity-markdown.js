@@ -14,14 +14,16 @@ class EntityMarkdownCard extends HTMLElement {
       		</style>
       	`;
 		const card = document.createElement('ha-card');
+		card.header = this.config.title;
 		this.content = document.createElement('div');
       	card.appendChild(this.content);
       	this.shadowRoot.appendChild(card);
     }
     
 	this._hass = hass;
+	let stateText = hass.states[this.config.entity].state.replace("'","&apos;");
 	this.content.innerHTML = `
-      <ha-markdown content='${hass.states[this.config.entity].state}'></ha-markdown>
+      <ha-markdown content='${stateText}'></ha-markdown>
     `;
   }
 
@@ -36,7 +38,7 @@ class EntityMarkdownCard extends HTMLElement {
   // The height of your card. Home Assistant uses this to automatically
   // distribute all cards over the available columns.
   getCardSize() {
-  	let stateText = this._hass.states[this._config.entity].state;
+  	let stateText = this._hass.states[this.config.entity].state;
   	if(stateText == "")
   	{
   		return 0
