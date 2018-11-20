@@ -14,7 +14,6 @@ This uses a template sensor defined like this:
 sensors:
   - platform: template
     sensors:
-      holiday_mode:
       markdown_test:
         friendly_name: Markdown Test
         value_template: |
